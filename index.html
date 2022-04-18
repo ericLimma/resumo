@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Loops</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="shortcut icon" href="img/loop.png">
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body>
+    <header class="header">
+
+            <nav class="bg-transparent navbar navbar-expand-lg   navbar-dark p-4">
+                <a class=" navbar-brand text-orange" href="#">JavaScript | Loops</a>
+                <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+                    <span class=" navbar-toggler-icon "></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(página atual)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown
+                            </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Ação</a>
+                            <a class="dropdown-item" href="#">Outra ação</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Algo mais aqui</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Desativado</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class=" text-center m-0 pb-3">
+            <h1 id = "titulo" class="pt-3 text-info display-6">Loops</h1>
+            <h4 class = "h4 text-white pb-3">(estruturas de repetição)</h4>
+        </div>
+</header>
+    
+<main class="principal">
+
+    <div class="container p-3">
+        
+        <div class="mb-5">
+                <h2 class="h2 pt-3">While</h2>
+                <h4 class="h4 pt-3">Tradução: enquanto</h4>
+                <p clsas="text-danger"> Lógica: enquanto algo for verdade, faça</p>
+                <img class = "img-fluid rounded mb-3" src="img/while1.jpg" alt="">
+
+                <br>
+            <script>
+                var x = 0
+                
+                //enquanto 'x' for igual ou menor que 10
+
+                while(x<=10){
+                    document.write(x+ ' ')
+                    x++ //para cada loop, adciona '+1' ao x, podia ser escrito como: x+=1, ou x= x+1
+                }
+            </script>
+            <p>enquanto 'x' for igual ou menor que 10
+            <br>
+            para cada loop, adciona '+1' ao x, podia ser escrito como: x + = 1, ou x = x+1</p>
+           <br> <hr>
+        </div>
+        
+
+        <div>
+            <h4 class="h4">Repetição While com Break</h4>
+            <p>o <strong>break</strong> faz com o loop pare, se atingir certa condição</p>
+            <img src="img/while-break.jpg" alt="" class="rounded mb-3 img-fluid">
+            <br>
+            <script>
+                
+                var y = 0
+                
+                while(y<=10){
+                    
+                    document.write(y+ ' ')
+                    
+                    if(y==5){
+                        break 
+                    }
+                    
+                    y++ 
+                }
+                </script>
+                <hr><br>
+        </div>
+
+        <div>
+            <h4 class="h4"> Usando While com <strong>Continue</strong></h4>
+            <p>Cuidado! Assim que a condição é atingida, o continue faz com o faça uma nova verificação, pode gerar um loop infinito</p>
+            <img src="img/while-continue.jpg" alt="" class="rounded mb-3 img-fluid">
+            <hr><br>
+        </div>
+
+
+
+        <div>
+
+            <h4 class = h4>Usando While para criar elemento</h4>
+            <p>10 quadrados usando while</p>
+            <img src="img/while-pratica.jpg" alt="" class="rounded mb-3 img-fluid">
+            <div class="d-flex flex-row flex-wrap">
+                <script>
+
+                    var z = 0
+                    
+                    while(z<=10){
+                        
+                        document.write('<div class="bg-black align-text-middle quadrados text-center m-1 border-black rounded text-info"><p>', z+'</p></div>')
+                        z++ 
+                    
+                     }
+                </script>
+            </div>
+            <hr><br>
+        </div>
+
+        <div>
+            <h4 class="h4">Usando <strong>DO WHILE</strong></h4>
+            <p>A grande diferença é que o comando será executado pelo menos uma vez, pois o teste é realizado apenas apos a execução</p>
+            <img src="img/while-do.jpg" class = "img-fluid rounded mb-3" alt="">
+            <br>
+            <div class="d-flex flex-row flex-wrap">
+
+                <script>
+                    /*
+                    while(condicao){
+                        comandos
+                    }
+                    */
+                   var h = 10
+                   do {                
+                    document.write('<div class="bg-black align-text-middle quadrados text-center m-1 border-black rounded text-info"><p>', h+'</p></div>')
+                    h--
+                    } while(h>=-10)
+                    
+                    
+                    //A grande diferença é que o comando será executado pelo menos uma vez, pois o teste é realizado apenas apos a execução
+                </script>
+            </div>
+            <hr><br>
+        </div>
+
+        <h2 class="h2">For</h2>
+        <div>
+            <h4 class="h4">Tradução: Para</h4>
+            <p>Lógica: Variável; condição; controle</p>
+            <p>Podemos também utilizar os comandos <strong>Break</strong> e <strong>Continue</strong></p>
+
+            <div class="d-flex flex-row flex-wrap">
+                <script>
+                    for(var t = 0; t<=10; t++){
+                        document.write('<div class="bg-black align-text-middle quadrados text-center m-1 border-black rounded text-info"><p>', t+'</p></div>')
+                    }
+                    </script>
+            </div>
+            <hr><br>
+        </div>
+        <div>
+            <h4 class="h4">Array + Loops</h4>
+            <p>Tabuada do 1 ao 9</p>
+            <div class="d-flex flex-row flex-wrap">
+                <img src="img/array-for.jpg" alt="" class="img-fluid rounded mb-3">
+                <p>A cada interção do primeiro loop, o segundo loop sera executado 10 vezes.</p>
+                <script>
+                    for(var a =1; a<= 9; a++){
+                        document.write('<div class="bg-black  border-black tabuada rounded text-info m-2 pt-2 pl-3 pr-3 "><p>')
+
+                        for(var b =1; b<=9; b++){
+                            document.write (a + 'x' , b + '=' , (a*b) + '<br>')
+                        }
+                        document.write ('</p></div>')
+                    }
+                </script>   
+            </div>
+            <hr><br>
+        </div>
+        <div>
+            <h4 class="h4">for in</h4>
+            <img src="img/for-in.jpg" alt="" class="img-fluid rounded mb-3">
+            <p>A cada interação do laço, a variavel <em>g</em> recebe o valor do array, até que o valor seja <em>undefined</em> </p>
+            <p> Resultado:</p>
+            <div class="bg-light border-black rounded p-2">
+                <script>
+                    var listaConvidados = ['Jorge', 'Maria', 'Pedro']
+                    
+                    for(var g in listaConvidados){
+                        document.write(listaConvidados[g] + ", ")
+                    }
+                    </script>
+            </div>
+        <hr><br>
+        </div>
+        <div>
+            <h4 class="h4">Método <em>.forEach</em></h4>
+            <p> Tradução: Para cada. É uma função do array, precisamos primeiro criar um array</p>
+            <script>
+
+                var listaFuncionarios=['Isabelly', 'Thalita', 'Pholiana', 'Clara', 'Erick'];
+
+                listaFuncionarios.forEach(function(valor, indice, array){ // o metodo espera receber uma função de callback, executara uma lógica para cada elemento do array
+                    //obs.: Não importa o nome da variavel passada, importa apenas a ordem
+                });
+            </script>
+
+        </div>
+
+    </div>
+
+</main>
+     <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
+
+<!--executar o javascript antes da criação do elemento html, cria um problema de precendencia-->

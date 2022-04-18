@@ -1,0 +1,37 @@
+.bg-black{
+    background-color: #151718;
+}
+.text-black{
+    color: #151718;
+}
+.bg-orange{
+    background-color: #fc5d3d;
+
+}
+.text-orange{
+    color: #fc5d3d !important;
+}
+.header{
+    background-image: url("../img/dust-bg.jpg");
+}
+.principal{
+    background-image: url("../img/dust-bg-light.jpg");
+
+}
+.quadrados{
+    height: 50px;
+    width: 50px;
+}
+.border-orange{
+    border:  1px solid #fc5d3d;
+}
+.border-black{
+    border: 1px solid #151718
+}
+.tabuada{
+    font-weight: 600;
+    width: 100px;
+}
+em{
+    font-weight: 600;
+}
